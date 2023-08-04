@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 # modo jr de fazer
 root 'home#index'
 
-# CRUD na unha
+# CRUD na unha pleno ou sênior!
 get '/vehicles', controller: 'vehicles', action: 'index'
 get '/vehicles/new', controller: 'vehicles', action: 'new'
 post '/vehicles', controller: 'vehicles', action: 'create'
