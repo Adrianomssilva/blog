@@ -8,4 +8,17 @@ class VehiclesController < ApplicationController
       @vehicle = Vehicle.new
       
    end
+   
+   def create
+      @vehicle = Vehicle.new(vehicle_params)
+      
+   end
+
+   private
+
+   def vehicle_params
+      params.require(:vehicle).permit(:brand, :model, :year, :plate, :kind)
+      
+   end
+
 end
