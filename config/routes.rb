@@ -15,6 +15,7 @@ root 'home#index'
 # delete '/vehicles/:id', controller: 'vehicles', action: ''
 
 # resources :vehicles #only: [:index, :new, :create, :show, :edit, :update, :destroy]
-resources :vehicles, only: [:index, :new, :create, :show, :edit, :update]
+resources :vehicles
+#only: [:index, :new, :create, :show, :edit, :update, :destroy]
 
 end

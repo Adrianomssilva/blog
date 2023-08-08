@@ -38,6 +38,14 @@ class VehiclesController < ApplicationController
          render :edit
       end
    end
+
+   def destroy
+      @vehicle = Vehicle.find(params[:id])
+
+      @vehicle.destroy
+
+      redirect_to vehicles_path
+   end
    
    
    private
@@ -45,6 +53,10 @@ class VehiclesController < ApplicationController
    def vehicle_params
       params.require(:vehicle).permit(:brand, :model, :year, :plate, :kind)
       
+   end
+
+   def fetch_vehicle
+      @vehicle = Vehicle.find(params[:id])
    end
 
 end
